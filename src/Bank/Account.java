@@ -12,10 +12,18 @@ public class Account
     public double getMoney() {
         return money;
     }
-    public void setMoney(double money) {
+    public void addMoney(double money) {
         this.money += money;
     }
     public void takemoney(double money){
-            this.money -= money;
+            if(this.money >= money)
+            {
+                this.money -= money;
+            }
+            else
+            {
+                System.out.println("Недостаточно средств на счете!");
+            }
+
     }
 }

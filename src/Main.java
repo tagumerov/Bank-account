@@ -1,6 +1,5 @@
 import Bank.Card;
 import Bank.Deposit;
-
 import java.util.Scanner;
 
 public class Main
@@ -38,7 +37,7 @@ public class Main
             {
                 System.out.println("сколько денег положить на депозит?");
                 double money = Double.parseDouble(in.nextLine());
-                deposit.setMoney(money);
+                deposit.addMoney(money);
                 System.out.println("денеги успешно переведены на депозит!");
                 System.out.println("На счету " + deposit.getMoney() + " руб");
             }
@@ -55,7 +54,7 @@ public class Main
             {
                 System.out.println("сколько денег положить на карту?");
                 double money = Double.parseDouble(in.nextLine());
-                card.setMoney(money);
+                card.addMoney(money);
                 System.out.println("денеги успешно переведены на карту!");
                 System.out.println("На счету " + card.getMoney() + " руб");
             }
@@ -75,10 +74,6 @@ public class Main
             {
                 System.out.println("На счету " + card.getMoney()+ "руб");
             }
-
-
         }
-
-
     }
 }
