@@ -6,7 +6,6 @@ public class Deposit extends Account
 {
 
     private Date depositDate = null;
-    private Date currentDate = null;
 
     @Override
     public void addMoney(double money)
@@ -18,14 +17,14 @@ public class Deposit extends Account
     @Override
     public void takemoney(double money)
     {
-        currentDate = new Date();
+        Date currentDate = new Date();
         long difference = currentDate.getTime() - depositDate.getTime();
         int days = (int)(difference / (24 * 60 * 60 * 1000));
         if(days >= 30)
         {
-            if(this.money >= money)
+            if(getMoney() >= money)
             {
-                this.money -= money;
+                addMoney(-money);
                 System.out.println("С депозита снято " + money + " рублей");
             }
             else

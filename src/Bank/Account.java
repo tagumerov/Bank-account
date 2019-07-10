@@ -2,9 +2,9 @@ package Bank;
 
 public class Account
 {
-    public double money;
+    private double money;
 
-        public Account()
+    public Account()
     {
         this.money = 0.0;
     }
